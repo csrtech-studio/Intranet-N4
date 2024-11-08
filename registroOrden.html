@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar Orden de Preparación</title>
+    <link rel="stylesheet" href="css/registroOrden.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registroOrden.html">Cargar Registro de Orden</a></li>
+                <li><a href="admin.html">Administrador</a></li>
+                <li><button id="logoutBtn">Cerrar sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <h2>Registrar Orden de Preparación</h2>
+        <form id="orderForm">
+            <label for="empleado"># Empleado:</label>
+            <input type="text" id="empleado" required>
+            <label for="orden">Orden:</label>
+            <input type="text" id="orden" required>
+            <label for="numParte">Número de Parte:</label>
+            <input type="text" id="numParte" required>
+            <label for="planta">Planta:</label>
+            <input type="text" id="planta" required>
+            <label for="fecha">Fecha:</label>
+            <input type="date" id="fecha" required>
+            <button type="submit">Cargar Registro</button>
+        </form>
+    </main>
+    <table id="orderTable">
+        <thead>
+            <tr>
+                <th># Empleado</th>
+                <th>Orden</th>
+                <th>Número de Parte</th>
+                <th>Planta</th>
+                <th>Fecha</th>
+            </tr>
+        </thead>
+        <tbody></tbody> <!-- Este es el tbody donde se agregarán las filas -->
+    </table>
+    
+
+     
+    <script type="module" src="js/firebaseConfig.js"></script>
+    <script type="module" src="js/registroOrden.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intranet N4 - Administrador</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="registroOrden.html">Cargar Registro de Orden</a></li>
+                <li><a href="admin.html">Administrador</a></li>
+                <li><button id="logoutBtn">Cerrar sesión</button></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>Agregar Noticias</h2>
+            <form id="newsForm">
+                <label for="type">Tipo de Contenido:</label>
+                <select id="type" required>
+                    <option value="noticia">Noticia</option>
+                    <option value="blog">Blog</option>
+                    <option value="aviso">Aviso</option>
+                    <option value="anuncio">Anuncio</option>
+                </select>
+                
+                <label for="title">Título:</label>
+                <input type="text" id="title" required>
+                
+                <label for="content">Contenido:</label>
+                <textarea id="content" required></textarea>
+                
+                <label for="imageUrl">URL de la Imagen (opcional):</label>
+                <input type="url" id="imageUrl" placeholder="http://ejemplo.com/imagen.jpg">
+                
+                <button type="submit">Agregar Noticia</button>
+            </form>
+        </section>
+    </main>
+
+    <script type="module" src="js/firebaseConfig.js"></script>
+    <script type="module" src="js/admin.js"></script>
+</body>
+</html>

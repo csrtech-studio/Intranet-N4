@@ -1,0 +1,107 @@
+/* Colores personalizados */
+:root {
+    --primary-color: #363636;
+    --secondary-color: #5c5c5c;
+    --accent-color: #55B155;
+    --text-color: #f5f5f5;
+    --background-color: #142662;
+    --background-image-url: url(https://www.jadeglobal.com/sites/default/files/2022-09/How-Cloud-Computing-Can-Provide-Competitive-Advantage-for-Scientific-and-Industrial-Computation.jpg);
+}
+
+/* Estilo global de la página */
+body {
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--background-color) !important;
+    background-image: var(--background-image-url);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Estilo de la imagen */
+img {
+    width: 40%;
+    height: auto;
+    display: block;
+    margin-right: 20px; /* Agregado para separar la imagen del texto */
+    float: left;
+}
+
+/* Estilo de los enlaces del menú */
+.navbar-nav li a {
+    color: var(--text-color);
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Agregado para animaciones suaves */
+}
+
+/* Efecto hover y active en los enlaces */
+.navbar-nav li a:hover,
+.navbar-nav li a:active {
+    color: var(--accent-color);
+    background-color: rgba(0, 0, 0, 0.2); /* Agregado para un sutil cambio de fondo al pasar el cursor */
+}
+
+/* Estilo del botón de menú */
+#showLinksBtn {
+    padding: 12px 20px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Efecto hover en el botón de menú */
+#showLinksBtn:hover {
+    background-color: #4d8f4d;
+}
+
+/* Estilo del contenido principal */
+.body-content {
+    margin-top: 150px;
+    padding: 20px;
+}
+
+/* Estilo del pie de página */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--secondary-color);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Enlaces en el pie de página */
+footer a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+}
+
+footer a:hover {
+    color: var(--accent-color);
+}
+
+/* Estilo para asegurarse de que el contenido del pie se quede en el fondo de la página */
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Asegurar que el contenido principal no tape el pie de página */
+.main-content {
+    flex-grow: 1;
+}
